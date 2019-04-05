@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Navbars from "./components/movie/Navbars"
+import Discover from "./components/Discover";
+import Popular from "./components/Popular";
+import MyList from "./components/MyList";
+import './bootstrap.min.css';
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <Navbars />
+        <div>
+          <Switch>
+            {/* exact={true} = exact et c'est pour eviter d'afficher tous les path dans l'url */}
+            <Route path="/" exact component= {Discover}/> 
+            <Route path="/popular" component= {Popular}/> 
+            <Route path="/my-list" component = {MyList}/>
+          </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
