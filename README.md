@@ -4,4 +4,4 @@ Cette dernière nous permet :
 ► D'enregistrer ces films sur une liste.
 ► De découvrir les films sortis au cinéma.
 
-
+https://media.giphy.com/media/fVbjTCD4audTox9NFx/giphy.gif
